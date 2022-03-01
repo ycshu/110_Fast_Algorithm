@@ -4,6 +4,6 @@
 
 ### Git 教學
 
-1 1_hello.c: 教大家怎麼printf
-2 2_floating.c: 教大家印出浮點數
-3 我自己亂改的
+1. 1_hello.c: 教大家怎麼printf
+2. 2_floating.c: 教大家印出浮點數
+3. 繼續寫下去 XD
