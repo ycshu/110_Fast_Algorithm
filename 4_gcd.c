@@ -65,6 +65,7 @@ int main() {
 	return 100;
 }
 unsigned int GCD(unsigned int a, unsigned int b) {
+	if (b == 0) return a;
 	unsigned int r = a % b;
 	if (r == 0) {
 		return b;
