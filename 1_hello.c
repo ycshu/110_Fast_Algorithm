@@ -1,8 +1,7 @@
-#include <stdio.h> // include stdio.h library for printf
+#include <stdio.h>
 
 int main()
 {
-	printf("Hello world!\n"); // print hello world to screen!
-	printf("%d\n", 3/2);
+	printf("Hello world!\n");
 	return 0;
 }
