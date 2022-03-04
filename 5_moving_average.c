@@ -9,8 +9,8 @@ int main() {
 	time_t t;
 
 	// Input the number N
-	
-	
+	printf("N= ");	
+	scanf("%d", &N);
 	// Locate the memory for x, y;
 
 	
