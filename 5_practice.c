@@ -2,7 +2,6 @@
 #include <stdlib.h>	// for memory allocation
 #include <time.h>	// for time calculation
 #include <math.h>	// for sine and cosine functions
-
 int main() {
 	// Declare all the variables
 	int k, n, N;
