@@ -8,7 +8,6 @@ int main() {
 	int k, n, N;
 	double *x, *yr, *yi;
 	time_t t, t1;
-	int j;
 
 	// Input the number N
 	printf("Input the number N :");
