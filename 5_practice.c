@@ -2,6 +2,9 @@
 #include <stdlib.h>	// for memory allocation
 #include <time.h>	// for time calculation
 #include <math.h>	// for sine and cosine functions
+
+//For pull request
+
 int main() {
 	// Declare all the variables
 	int k, n, N;
