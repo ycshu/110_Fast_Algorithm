@@ -9,18 +9,19 @@ int main() {
 	time_t t;
 
 	// Input the number N
-	
+	scanf("%d", &N);
 	
 	// Locate the memory for x, yr, yi;
+	x = (double*)malloc(sizeof(double));
+	yr = (double*)malloc(sizeof(double));
+	yi = (double*)malloc(sizeof(double));
 
 	// Initial setting for x, for example, x[k] = k
-	
-	
-	
+	for(k = 0; k < N; k++) x[k] = k;
 	
 	t = clock();	
 	// yr[n]+i*yi[n] = sum(exp(-i 2 Pi k n / N)*x[k], k=0..N-1), n=0..N-1 
-
+	
 
 
 
@@ -32,7 +33,9 @@ int main() {
 	printf("%d ms for discrete Fourier Transform of %d elements\n", t, N);
 
 	// free the memory located by x, yr, yi
-	
+	free(x);
+	free(yr);
+	free(yi);
 	
 	
 	return 100;
