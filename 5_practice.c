@@ -9,10 +9,14 @@ int main() {
 	time_t t;
 
 	// Input the number N
-	
+	printf("Enter N = ");
+	scanf("%d",&N);
 	
 	// Locate the memory for x, yr, yi;
-
+	x = (double *) malloc(N*sizeof(double));
+	yr = (double *) malloc(N*sizeof(double));
+	yi = (double *) malloc(N*sizeof(double));
+	
 	// Initial setting for x, for example, x[k] = k
 	
 	
