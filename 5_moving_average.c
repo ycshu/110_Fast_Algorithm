@@ -76,7 +76,6 @@ int main(int argc, const char *argv[]) {
         printf("%.3f\n", y[i]);
     }
 	printf("\n");
-
 	// free the memory located by x, y
     free(x);
     free(y);
