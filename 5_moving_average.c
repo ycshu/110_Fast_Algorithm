@@ -4,7 +4,7 @@
 #include <math.h>	// for sine and cosine functions
 #include <string.h>
 
-#define TEST
+// #define TEST
 
 #ifdef TEST
 #include <assert.h>
@@ -51,24 +51,17 @@ int main(int argc, const char *argv[]) {
     }
 #endif
 	
-	
 	t = clock();	
 	// y[n] = sum(x[k], k=n-M..n+M)/(2M+1), n=0..N-1 
 	// zero padding for x[k] if k<0 or k>=N
     //initialize y[0]
     for(int i = 0; i <= M; ++i) y[0] += x[i];
+    
 
-    for(int i = 1; i < N; ++i){
-        // middle is i
-        if(i - 1 - M >= 0){
-            y[i] = y[i - 1] - x[i - 1 - M];
-        }else{
-            y[i] = y[i - 1];
-        }
-        
-        if(i + M < N){
-            y[i] += x[i + M];
-        }
+    // Use branchless method to reduce if-else
+    for(int i = 1, lower = - M, upper = 1 + M; i < N; ++i, ++lower, ++upper){
+        y[i] = (y[i - 1] - x[lower]) * (lower >= 0) + y[i-1]*(lower < 0);
+        y[i] += x[i + M] * (upper < N);
     }
     
     for(int i = 0; i < N; ++i) y[i] /= size;
@@ -78,7 +71,7 @@ int main(int argc, const char *argv[]) {
 	t = clock() - t;
     for(int i = 0; i < N; ++i){
 #ifdef TEST
-        assert(y[i] - y_test[i] < 0.00001); // 0.00001 for floating number bias
+        assert(y[i] - y_test[i] < 0.001); // 0.001 for floating number bias
 #endif
         printf("%.3f\n", y[i]);
     }
