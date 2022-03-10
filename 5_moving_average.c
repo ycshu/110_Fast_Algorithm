@@ -12,7 +12,7 @@
 
 int main(int argc, const char *argv[]) {
 	// Declare all the variables
-	int k, n, M, N;
+	int M, N;
 	double *x, *y;
 	time_t t;
 
