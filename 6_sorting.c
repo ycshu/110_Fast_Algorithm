@@ -2,6 +2,12 @@
 #include <stdlib.h>	// for memory allocation
 #include <time.h>	// for time calculation
 #include <math.h>	// for sine and cosine functions
+
+
+
+int quick_sort(double*, int, int);
+void SWAP(double, double);
+
 int main() {
 	// Declare all the variables
 	int k, m, n, N;
@@ -87,5 +93,51 @@ int main() {
 }
 
 int quick_sort(double *x, int L, int R){
-	
+	double temp;
+	if(L < R){
+		double pk = x[L];
+		int i = L, j = R + 1;
+		while(i < j){
+			while(x[i] < pk) i++;
+			while(x[j] > pk) j--;
+			if(i < j){
+				temp = x[i];
+				x[i] = x[j];
+				x[j] = temp;
+			}
+		}
+		temp = x[L];
+		x[L] = x[j];
+		x[j] = temp; 
+//		SWAP(x[L], x[j]);
+		quick_sort(x, L, j - 1);
+		quick_sort(x, j + 1, R);
+	}
 }
+
+//void SWAP(double X, double Y){
+//	X ^= Y;
+//	Y ^= X;
+//	X ^= Y;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
