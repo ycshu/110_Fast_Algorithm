@@ -5,11 +5,11 @@
 
 
 
-void quick_sort(double*, int, int);
-int Partition(double*, int, int);
-double Select(double*, int, int, int);
-double Find_Med(double*, int, int);
-double QD(double*, int, int);
+void quick_sort(double*, int, int);			//quick sort
+int Partition(double*, int, int);			//sub algo of quick sort
+double Select(double*, int, int, int);		// find the i-th number
+double Find_Med(double*, int, int);			//find the median
+double QD(double*, int, int);				// find the Quartile Deviation
 int main() {
 	// Declare all the variables
 	int k, m, n, N;
