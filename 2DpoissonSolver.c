@@ -345,7 +345,7 @@ int main(){
 	double **A, *x, *u, **U, *b, **F, *r;
 	time_t t;
 	
-	N = 16;
+	N = 32;
 	
 	M = (N-1)*(N-1);
 	//create memory, 將2維array開成一列 
